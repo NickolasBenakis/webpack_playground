@@ -17,7 +17,7 @@ module.exports = {
     port: PORT
   },
   entry: {
-    app: './src/app/index.js'
+    app: './src/app/index.js',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -26,5 +26,8 @@ module.exports = {
   module: {
     rules
   },
-  plugins
+  plugins,
+  optimization: {
+    runtimeChunk: 'single'
+  }
 };
